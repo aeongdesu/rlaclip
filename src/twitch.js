@@ -39,7 +39,7 @@ export default async () => {
         const reply = async (content) => await chat.say(channel, content, { replyTo: msg })
         if (message === "!클립") {
             const down = cooldown.get(channel)
-            if (down !== undefined && Date.now() < down) return reply("ㅁㄴㅇㄹ")
+            if (down !== undefined && Date.now() < down) return
             cooldown.set(channel, Date.now() + 10 * 1000)
             return clip(channel.replace("#", ""), api, reply)
         }
