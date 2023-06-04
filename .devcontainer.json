@@ -1,0 +1,9 @@
+{
+	"image": "mcr.microsoft.com/devcontainers/javascript-node:0-18",
+	"features": {
+		"ghcr.io/devcontainers-contrib/features/pnpm:2": {
+			"version": "latest"
+		}
+	},
+    "postCreateCommand": "pnpm install"
+}

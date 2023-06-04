@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#6441a5" />
+    <meta property="og:type" content="video">
+    <meta property="og:title" content="김클립" />
+    <meta property="og:image" content="<%- thumbnail_url %>" />
+    <meta property="og:video" content="<%- url %>" />
+    <style>
+        html,
+        body {
+            padding: 0;
+            margin: 0;
+            height: 100%
+        }
+
+        #player {
+            width: 100% !important;
+            height: 100% !important;
+        }
+    </style>
+    <script src="https://ssl.p.jwpcdn.com/player/v/8.27.1/jwplayer.js"></script>
+</head>
+
+<body>
+    <div id="player"></div>
+    <script>
+        const player = jwplayer("player").setup({
+            "aspectratio": "16:9",
+            "autostart": false,
+            "controls": true,
+            "displaydescription": false,
+            "displaytitle": true,
+            "key": "uuzVjfcYuXfE63fo",
+            "preload": "auto",
+            "file": "<%- url %>",
+            "image": "<%- thumbnail_url %>"
+        })
+    </script>
+</body>
+
+</html>
